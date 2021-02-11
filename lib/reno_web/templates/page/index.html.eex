@@ -1,6 +1,6 @@
 <section class="phx-hero">
   <h1><%= gettext "Welcome to %{name}!", name: "Reno" %></h1>
-  <p>This is a sandbox for improving knowledge about elixir and phoenix</p>
+  <p>This is a sandbox for implementing stuff</p>
 </section>
 
 <section class="row">

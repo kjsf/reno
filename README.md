@@ -1,6 +1,6 @@
 # Reno
 
-# Reno has no definite purpose. It is a sandbox to try out implementing different stuff
+# Reno is a sandbox to try out implementing different stuff
 
 To start your Phoenix server:
 

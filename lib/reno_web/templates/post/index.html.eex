@@ -1,0 +1,13 @@
+<h1>Reno Posts</h1>
+
+<%= link("Create Post", to: Routes.post_path(@conn, :new), class: "btn") %>
+
+<div class="Posts">
+  <%= for post <- @posts do %>
+  <ul>
+    <%= post.title %>
+    <li><%= post.inserted_at %></li>
+    <%= link "Show", to: Routes.post_path(@conn, :show, post) %>
+  </ul>
+  <% end %>
+</div>

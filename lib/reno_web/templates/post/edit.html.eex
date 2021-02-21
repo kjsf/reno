@@ -1,0 +1,6 @@
+<h1>Edit Post <%= @post.id %></h1>
+
+<!-- prettier-ignore -->
+<%= render "form.html", Map.put(assigns, :action, Routes.post_path(@conn, :update, @post)) %>
+
+<%= link "Back", to: Routes.post_path(@conn, :index) %>

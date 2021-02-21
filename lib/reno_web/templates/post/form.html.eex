@@ -18,5 +18,5 @@
 <%= error_tag f, :content %>
 
 
-<%= submit "Create Post" %>
+<%= submit "Submit" %>
 <% end %>

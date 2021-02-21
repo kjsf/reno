@@ -1,7 +1,7 @@
 <h1>Create New Post</h1>
 
 <!-- prettier-ignore -->
-<%= render "create.html", Map.put(assigns, :action, Routes.post_path(@conn, :create))%>
+<%= render "form.html", Map.put(assigns, :action, Routes.post_path(@conn, :create))%>
 
 <!-- prettier-ignore -->
 <%= link("Back", to: Routes.post_path(@conn, :index), class: "btn") %>

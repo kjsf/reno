@@ -1,13 +1,16 @@
-<h1>Reno Posts</h1>
+<h1>Just Some Posts</h1>
 
 <%= link("Create Post", to: Routes.post_path(@conn, :new), class: "btn") %>
 
 <div class="Posts">
   <%= for post <- @posts do %>
+  <!-- prettier-ignore -->
   <ul>
     <%= post.title %>
     <li><%= post.inserted_at %></li>
-    <%= link "Show", to: Routes.post_path(@conn, :show, post) %>
+    <li><%= link "Show", to: Routes.post_path(@conn, :show, post) %></li>
+    <li> <%= link "Update", to: Routes.post_path(@conn, :edit, post) %> </li>
+    <li> <%= link "Delete", to: Routes.post_path(@conn, :delete, post), method: :delete %> </li>
   </ul>
   <% end %>
 </div>

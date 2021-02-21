@@ -27,10 +27,10 @@ defmodule Reno.Posts do
   Raises exception is no return
 
   ##Examples
-  iex> get_post(id)
+  iex> get_post!(id)
   [%Posts{},...]
   """
-  def get_post(id) do
+  def get_post!(id) do
     Post
     |> Repo.get!(id)
   end
@@ -55,5 +55,17 @@ defmodule Reno.Posts do
   """
   def change_post(%Post{} = post, attrs \\ %{}) do
     Post.changeset(post, attrs)
+  end
+
+  def delete_post(id) do
+    Post
+    |> Repo.get!(id)
+    |> Repo.delete()
+  end
+
+  def update_post(%Post{} = post, attrs) do
+    post
+    |> Post.changeset(attrs)
+    |> Repo.update()
   end
 end
